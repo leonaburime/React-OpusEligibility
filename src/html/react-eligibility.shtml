@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  	<head>
+		<title>Eligibility</title>
+
+		<!--#include virtual="./react-header.html" -->
+
+  	</head>
+
+  	<body>
+		<!--#include virtual="./nav.html" -->
+
+		<!-- Begin page content -->
+		<div class="container-fluid" id="main">
+
+			<div class="row-fluid">
+				<!-- Main page content -->
+
+					<div class="page-header">
+					<!-- do not display.  must have permission to see IUI page. -->
+<!-- 					   <a href="../interim-ui/clean-data.shtml" class="right" id="academic-roster-url">Go to Academic History Data page</a>  -->
+					   <h1>Eligibility</h1>
+					</div>
+
+					<p id="instructions">Your faculty are eligible for the following academic personnel actions. For the next few months, department staff are cleaning up academic history data, which may affect Eligibility.  So if you see something that isn't correct, don't panic!</p>
+
+					<!--Filters-->
+
+					<label for="action-filters">Show Only</label>
+					<ul id="action-filters">
+						<li><input class="filter-checkbox" type="checkbox" id="mandatory-actions-checkbox" name="mandatory-actions-checkbox" title="Mandatory actions checkbox" value="mandatory-actions">Mandatory Actions</li>
+						<!--<li><input class="filter-checkbox" type="checkbox" id="deferred-actions-checkbox" name="deferred-actions-checkbox" title="Deferred actions checkbox" value="deferred-actions">Deferred Actions</li>-->
+						<li><input class="filter-checkbox" type="checkbox" id="waiver-checkbox" name="waiver-checkbox" title="Waiver checkbox" value="waiver">Appointees based in your department (or joints without a waiver)&thinsp; <a role="button" aria-label="help tip" trigger="hover" data-trigger="hover" tabindex="0" class="ttip" data-placement="top" data-toggle="popover" white-space="pre-wrap" data-html="true" data-content="Checking this box will display only appointees eligible for review by your department (i.e., it will filter out joint appointees with review waivers)."><span aria-hidden="true" class="icon-help-circled help ttip"></span></a></li>
+					</ul>
+
+					<!--<label for="year-filter">Review Year</label>
+					      <select id="year-filter">
+
+					</select>-->
+
+			  		<div id="table-scroll-area">
+				  		<table id="eligibility-table" class="display nowrap" cellspacing="0" width="100%">
+							<thead>
+								<tr>
+							    	<th class="nosort">UID</th>
+							    	<th class="column-width">Name</th>
+							    	<th>School</th>
+							    	<th>Division</th>
+							    	<th>Department</th>
+							    	<th>Area&thinsp; <a role="button"data-container="body"   aria-label="help tip" trigger="hover" data-trigger="hover" tabindex="0" class="ttip" data-placement="top" data-toggle="popover" white-space="pre-wrap" data-html="true" data-content="We are using this term to represent sub-departments. Some schools call these divisions, some call them sections. We agreed on this term so as not be confused with the Divisions in the College of L&S. For most departments, these columns will be N/A."><span aria-hidden="true" class="icon-help-circled help ttip"></span></a></th>
+							    	<th>Specialty&thinsp; <a role="button" data-container="body"  aria-label="help tip" trigger="hover" data-trigger="hover" tabindex="0" class="ttip" data-placement="top" data-toggle="popover" white-space="pre-wrap" data-html="true" data-content="We are using this term to represent entities that are a subset of an Area.  These specialties may represent topical groupings within the Area."><span aria-hidden="true" class="icon-help-circled help ttip"></span></a></th>
+							    	<th>Affiliation&thinsp; <a role="button" data-container="body"  aria-label="help tip" trigger="hover" data-trigger="hover" tabindex="0" class="ttip" data-placement="top" data-toggle="popover" white-space="pre-wrap" data-html="true" data-content="Primary indicates that your department is the appointee's home department.  Additional means the appointee has a joint or split appointment in your department, with a primary appointment elsewhere."><span aria-hidden="true" class="icon-help-circled help ttip"></span></a></th>
+							    	<th>Academic Year</th>
+							    	<th>Action Type</th>
+							    	<th>Current Series</th>
+							    	<th>Current Rank/Step</th>
+							    	<th>Years at Current Rank</th>
+							    	<th>Years at Current Step</th>
+							    	<th>Eligible Rank/Step</th>
+							    	<th>Effective Date</th>
+						    	</tr>
+						    	<tr>
+									<td class="column-filter"></td>
+									<td class="column-filter"></td>
+									<td class="column-filter">
+										<select id="eligible-school-select" aria-label="select a school" class="form-control">
+										</select>
+									</td>
+									<td class="column-filter">
+										<select id="eligible-division-select" aria-label="select a division" class="form-control">
+										</select>
+									</td>
+									<td class="column-filter">
+										<select id="eligible-department-select" aria-label="select a department" class="form-control">
+										</select>
+									</td>
+									<td class="column-filter">
+										<select id="eligible-area-select" aria-label="select an area" class="form-control">
+										</select>
+									</td>
+									<td class="column-filter">
+										<select id="eligible-specialty-select" aria-label="select a specialty" class="form-control">
+										</select>
+									</td>
+									<td class="column-filter">
+										<select id="affiliation-select" aria-label="select an affiliation" class="form-control">
+										    <option value="All">All</option>
+											<option value="Additional">Additional</option>
+											<option value="Primary">Primary</option>
+										</select>
+									</td>
+									<td class="column-filter">
+										<select id="eligible-academicYear-select" aria-label="select an academic year" class="form-control">
+										</select>
+									</td>
+									<td class="column-filter">
+										<select id="eligible-action-select" aria-label="select an action" class="form-control">
+										</select>
+									</td>
+
+									<td class="column-filter">
+										<select id="eligible-series-select" aria-label="select a series" class="form-control">
+										</select>
+									</td>
+
+									<td class="column-filter"></td>
+									<td class="column-filter"></td>
+									<td class="column-filter"></td>
+									<td class="column-filter"></td>
+									<td class="column-filter"></td>
+								</tr>
+						    </thead>
+						    <tbody>
+
+						    </tbody>
+						</table>
+					</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="infoModalLabel">Please Note</h4>
+					</div>
+					<div class="modal-body">
+						<form id="action-form" role="form">
+  							<div class="form-group">
+    							<p>This feature is coming soon!</p>
+  							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Generic Error -->
+        <div class="modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="error">
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <div class="modal-header modal-danger">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h2 class="white">Error</h2>
+                    </div>
+                    <div class="modal-body">
+
+                    </div> <!-- /modal-body -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger left" data-dismiss="modal">Okay</button>
+                    </div> <!-- /modal-footer -->
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+		<!--#include virtual="./footer.html" -->
+
+  	</body>
+</html>
