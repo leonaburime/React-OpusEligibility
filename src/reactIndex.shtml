@@ -3,12 +3,12 @@
   	<head>
 		<title>Eligibility</title>
 
-		<!--#include virtual="./react-header.html" -->
+		<!--#include virtual="./html/react-header.html" -->
 
   	</head>
 
   	<body>
-		<!--#include virtual="./nav.html" -->
+		<!--#include virtual="./html/nav.html" -->
 
 		<!-- Begin page content -->
 		<div class="container-fluid" id="main">
@@ -155,7 +155,7 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
-		<!--#include virtual="./footer.html" -->
+    <!--#include virtual="./html/nav.html" -->
 
-  	</body>
+    </body>
 </html>
